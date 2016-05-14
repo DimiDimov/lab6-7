@@ -137,6 +137,7 @@ func main() {
 		// once you've added all the columns in, close the header
 		table += "</thead><tbody>"
 		// columns
+poop
         var car_id int
 		for rows.Next() {
 			// rows.Scan(&last1) // put columns here prefaced with &
