@@ -137,7 +137,7 @@ func main() {
 		// once you've added all the columns in, close the header
 		table += "</thead><tbody>"
 		// columns
-        var last1 int
+        var car_id int
 		for rows.Next() {
 			// rows.Scan(&last1) // put columns here prefaced with &
 			table += "<tr><td> + car_id + </td></tr>" // <--- EDIT THIS LINE
