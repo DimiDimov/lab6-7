@@ -81,7 +81,7 @@ func main() {
 			// preface each variable with &
 			rows.Scan(&first, &last) // <--- EDIT THIS LINE
 			// can't combine ints and strings in Go. Use strconv.Itoa(int) instead
-			table += "<tr><td>" + strconv.Itoa(id) + "</td><td>" + first + "</td><td> + last + </td></tr>" // <--- EDIT THIS LINE
+			table += "<tr><td>" + first + "</td><td> + last + </td></tr>" // <--- EDIT THIS LINE
 		}
 		// finally, close out the body and table
 		table += "</tbody></table>"
