@@ -9,6 +9,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"strconv"
 
 	// this allows us to run our web server
 	"github.com/gin-gonic/gin"
@@ -109,7 +110,7 @@ func main() {
         var first1 string      // <--- EDIT THESE LINES
         var last1 string
 		for rows.Next() {
-			// rows.Scan(&first1,&last1) // put columns here prefaced with &
+			 rows.Scan(&first1,&last1) // put columns here prefaced with &
 			table += "<tr><td>" + first1 + "</td> <td>" + last1 + "</td></tr>" // <--- EDIT THIS LINE
 		}
 		// finally, close out the body and table
@@ -138,8 +139,8 @@ func main() {
 		// columns
         var car_id int
 		for rows.Next() {
-			// rows.Scan(&last1) // put columns here prefaced with &
-			table += "<tr><td>" + car_id + "</td></tr>" // <--- EDIT THIS LINE
+			rows.Scan(&car_id) // put columns here prefaced with &
+			table += "<tr><td>" + strconv.Itoa(car_id) + "</td></tr>" // <--- EDIT THIS LINE
 		}
 		// finally, close out the body and table
 		table += "</tbody></table>"
