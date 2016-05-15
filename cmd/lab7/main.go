@@ -121,7 +121,7 @@ func main() {
 	router.GET("/query3", func(c *gin.Context) {
 		table := "<table class='table'><thead><tr>"
 		// put your query here
-		rows, err := db.Query("SELECT car_id FROM Car WHERE price > (SELECT avg(price) FROM Car;”) // <--- EDIT THIS LINE
+		rows, err := db.Query("SELECT car_id FROM Car WHERE price > (SELECT avg(price) FROM Car;") // <--- EDIT THIS LINE
 		if err != nil {
 			// careful about returning errors to the user!
 			c.AbortWithError(http.StatusInternalServerError, err)
@@ -137,7 +137,6 @@ func main() {
 		// once you've added all the columns in, close the header
 		table += "</thead><tbody>"
 		// columns
-poop
         var car_id int
 		for rows.Next() {
 			// rows.Scan(&last1) // put columns here prefaced with &
