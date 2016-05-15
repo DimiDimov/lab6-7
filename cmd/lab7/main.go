@@ -80,7 +80,7 @@ func main() {
 			// preface each variable with &
 			rows.Scan(&first, &last) // <--- EDIT THIS LINE
 			// can't combine ints and strings in Go. Use strconv.Itoa(int) instead
-			table += "<tr><td>" + first + "</td><td> + last + </td></tr>" // <--- EDIT THIS LINE
+			table += "<tr><td>" + first + "</td><td>" + last + "</td></tr>" // <--- EDIT THIS LINE
 		}
 		// finally, close out the body and table
 		table += "</tbody></table>"
@@ -110,7 +110,7 @@ func main() {
         var last1 string
 		for rows.Next() {
 			// rows.Scan(&first1,&last1) // put columns here prefaced with &
-			table += "<tr><td> + first +</td> <td> + last + </td></tr>" // <--- EDIT THIS LINE
+			table += "<tr><td>" + first1 + "</td> <td>" + last1 + "</td></tr>" // <--- EDIT THIS LINE
 		}
 		// finally, close out the body and table
 		table += "</tbody></table>"
@@ -139,7 +139,7 @@ func main() {
         var car_id int
 		for rows.Next() {
 			// rows.Scan(&last1) // put columns here prefaced with &
-			table += "<tr><td> + car_id + </td></tr>" // <--- EDIT THIS LINE
+			table += "<tr><td>" + car_id + "</td></tr>" // <--- EDIT THIS LINE
 		}
 		// finally, close out the body and table
 		table += "</tbody></table>"
